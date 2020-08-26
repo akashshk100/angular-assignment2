@@ -24,7 +24,7 @@ export class LoginComponent{
         if (this.form.value.username === this.username && this.form.value.password === this.password){
             var user = {"username": this.form.value.username, "password": this.form.value.password}
             localStorage.setItem("user", JSON.stringify(user))
-            this.router.navigate(['dashboard/event'])
+            this.router.navigate(['dashboard/available-books'])
         }
     }
 
