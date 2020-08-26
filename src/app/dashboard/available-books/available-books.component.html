@@ -1,0 +1,22 @@
+<div class="container p-3 mt-3">
+    <div class="list-group border border-dark">
+        <div class="list-group-item list-group-item-action" *ngFor = "let book of books; let i = index" (mouseenter) = "enableOption(i)" (mouseleave) = "disableOption(i)">
+            {{book.bookName}}
+            <br>
+            <div class="mt-2">
+                <span 
+                class = "small p-3"
+                *ngIf = "option[i]">Author: {{book.bookAuthor}}
+                </span>
+                <span 
+                class = "small p-3"
+                *ngIf = "option[i]">Category: {{book.bookCategory}}
+                </span>
+                <span 
+                class = "small p-3"
+                *ngIf = "option[i]">Available: {{book.available}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
